@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AJAX Project</title>
+  <title>Easy QR Code Generator</title>
   <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -11,8 +11,47 @@
 </head>
 <body>
   <header>
+    <div class="navbar">
+      <div class="container">
+        <div class="row margin-0">
+          <div class="column-full">
+            <div class="vert-center">
+              Easy QR Code Generator
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
   <main>
+    <div class="container">
+      <div class="row">
+        <div class="column-half">
+          <form action="">
+            <label for="website">
+              Your Website URL:
+            </label>
+            <div>
+              <input type="text" id="website" placeholder="http://www.yourwebsite.name" required name="url">
+            </div>
+            <label for="size">
+              Size: <span id="qrWidth">10</span> x <span id="qrHeight">10</span>
+            </label>
+            <div>
+              <input type="range" name="size" id="size" min="10" max="1000" step="10">
+            </div>
+            <div>
+              <button>GENERATE</button>
+            </div>
+          </form>
+        </div>
+        <div class="column-half">
+          <div class="qrblock" id="qrBlock">
+            <img src="http://api.qrserver.com/v1/create-qr-code/?data=HelloWorld!&size=100x100" alt="" id="qrHero" class="qr-hero">
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
