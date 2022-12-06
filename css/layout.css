@@ -5,6 +5,7 @@
 
 .row {
   display: flex;
+  flex-wrap: wrap;
   margin: 20px 0;
   padding: 0 5%;
 }
